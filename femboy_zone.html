@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Femboy Zone ✨</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for cute icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Poppins and Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        femboy: {
+                            50: '#fff0f5',
+                            100: '#ffe4ee',
+                            200: '#ffccd9',
+                            300: '#ffa3bc',
+                            400: '#ff6690',
+                            500: '#ff336d',
+                            600: '#ef004b',
+                            700: '#c7003c',
+                        },
+                        pastel: {
+                            pink: '#ffb6c1',
+                            lavender: '#e6e6fa',
+                            peach: '#ffdab9',
+                            mint: '#f0fff0',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        cute: ['Quicksand', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff0f5;
+            color: #4a4a4a;
+            overflow-x: hidden;
+        }
+        .cute-heading {
+            font-family: 'Quicksand', sans-serif;
+        }
+        /* Floating hearts and sparkles animation */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+            50% { transform: translateY(-20px) rotate(10deg); opacity: 0.8; }
+            100% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+        }
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        .glow-pink {
+            box-shadow: 0 0 25px rgba(255, 102, 144, 0.4);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 182, 193, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-femboy-50 min-h-screen flex flex-col relative selection:bg-femboy-300 selection:text-white">
+
+    <!-- Floating Background Elements -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="absolute top-10 left-10 text-femboy-300 text-2xl floating" style="animation-delay: 0s;">💖</div>
+        <div class="absolute top-1/4 right-16 text-pink-400 text-3xl floating" style="animation-delay: 1s;">✨</div>
+        <div class="absolute bottom-1/3 left-1/5 text-femboy-400 text-xl floating" style="animation-delay: 2s;">🌸</div>
+        <div class="absolute top-2/3 right-1/4 text-pink-300 text-2xl floating" style="animation-delay: 1.5s;">🎀</div>
+        <div class="absolute bottom-12 right-12 text-femboy-300 text-3xl floating" style="animation-delay: 0.5s;">✨</div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-femboy-200 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl animate-bounce">🎀</span>
+                    <span class="cute-heading text-2xl font-bold bg-gradient-to-r from-femboy-600 to-pink-500 bg-clip-text text-transparent">Femboy Zone</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 font-medium">
+                    <a href="#hero" class="text-femboy-600 hover:text-femboy-700 transition">Home</a>
+                    <a href="#inspiration" class="text-gray-600 hover:text-femboy-500 transition">Inspo</a>
+                    <a href="#community" class="text-gray-600 hover:text-femboy-500 transition">Community</a>
+                    <a href="#vibe" class="text-gray-600 hover:text-femboy-500 transition">Quiz</a>
+                </div>
+                <div>
+                    <button onclick="openJoinModal()" class="bg-gradient-to-r from-femboy-400 to-pink-500 text-white font-cute font-bold px-6 py-2.5 rounded-full shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+                        Join Club ✨
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="relative z-10 pt-16 pb-24 md:pt-24 md:pb-32 px-4 max-w-7xl mx-auto text-center flex-grow">
+        <div class="inline-block bg-femboy-100 text-femboy-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 shadow-sm border border-femboy-200">
+            ✨ Welcome to the cutest corner of the internet! 🌸
+        </div>
+        <h1 class="cute-heading text-4xl sm:text-6xl md:text-7xl font-extrabold text-gray-800 tracking-tight mb-6">
+            Express Your Cute & <br class="hidden sm:inline"><span class="bg-gradient-to-r from-femboy-500 via-pink-500 to-femboy-600 bg-clip-text text-transparent">Fabulous Self</span> 💖
+        </h1>
+        <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 mb-10 font-normal">
+            A welcoming, ultra-pink space for fashion inspiration, supportive community talks, aesthetic tips, and embracing maximum cuteness!
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="#inspiration" class="w-full sm:w-auto bg-femboy-500 hover:bg-femboy-600 text-white font-cute font-bold text-lg px-8 py-4 rounded-2xl shadow-xl glow-pink hover:scale-105 transition-all">
+                Explore Style Inspo ✨
+            </a>
+            <a href="#community" class="w-full sm:w-auto bg-white hover:bg-femboy-50 text-femboy-600 border-2 border-femboy-300 font-cute font-bold text-lg px-8 py-4 rounded-2xl shadow-sm hover:scale-105 transition-all">
+                Visit Community 💬
+            </a>
+        </div>
+    </header>
+
+    <!-- Style Inspiration Section -->
+    <section id="inspiration" class="relative z-10 py-16 bg-white/60 backdrop-blur-md border-y border-femboy-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-femboy-400 font-bold text-sm tracking-widest uppercase">Aesthetic Hub</span>
+                <h2 class="cute-heading text-3xl md:text-4xl font-bold text-gray-800 mt-2">Style Inspiration & Looks 🎀</h2>
+                <p class="text-gray-600 mt-2">Discover popular styles, outfits, and aesthetic vibes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card rounded-3xl p-6 shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="h-56 rounded-2xl bg-gradient-to-br from-femboy-200 to-pink-300 flex items-center justify-center relative overflow-hidden mb-6">
+                        <span class="text-6xl group-hover:scale-125 transition-transform duration-300">👗</span>
+                        <div class="absolute top-3 right-3 bg-white/90 text-femboy-600 text-xs px-3 py-1 rounded-full font-bold shadow-sm">Popular</div>
+                    </div>
+                    <h3 class="cute-heading text-xl font-bold text-gray-800 mb-2">Pastel & Oversized Hoodies</h3>
+                    <p class="text-gray-600 text-sm mb-4">Cozy, oversized hoodies paired with cute knee-high socks for ultimate comfort and adorable streetwear vibes.</p>
+                    <button onclick="loveCard(this)" class="flex items-center gap-2 text-femboy-500 font-bold text-sm hover:text-femboy-700 transition">
+                        <span>💖</span> <span class="love-count">342</span> Loves
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card rounded-3xl p-6 shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="h-56 rounded-2xl bg-gradient-to-br from-purple-200 to-femboy-300 flex items-center justify-center relative overflow-hidden mb-6">
+                        <span class="text-6xl group-hover:scale-125 transition-transform duration-300">🎀</span>
+                        <div class="absolute top-3 right-3 bg-white/90 text-femboy-600 text-xs px-3 py-1 rounded-full font-bold shadow-sm">Trending</div>
+                    </div>
+                    <h3 class="cute-heading text-xl font-bold text-gray-800 mb-2">Skirt & Thigh-Highs Classic</h3>
+                    <p class="text-gray-600 text-sm mb-4">The timeless classic look! Pleated tennis skirts matched with striped stockings and cute chunky sneakers.</p>
+                    <button onclick="loveCard(this)" class="flex items-center gap-2 text-femboy-500 font-bold text-sm hover:text-femboy-700 transition">
+                        <span>💖</span> <span class="love-count">519</span> Loves
+                    </button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card rounded-3xl p-6 shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="h-56 rounded-2xl bg-gradient-to-br from-pink-200 to-pastel-peach flex items-center justify-center relative overflow-hidden mb-6">
+                        <span class="text-6xl group-hover:scale-125 transition-transform duration-300">✨</span>
+                        <div class="absolute top-3 right-3 bg-white/90 text-femboy-600 text-xs px-3 py-1 rounded-full font-bold shadow-sm">Cozy</div>
+                    </div>
+                    <h3 class="cute-heading text-xl font-bold text-gray-800 mb-2">Cat Ears & Loungewear</h3>
+                    <p class="text-gray-600 text-sm mb-4">Relax at home with fluffy plush cat ear headbands, soft pastel pajama sets, and cozy blanket wraps.</p>
+                    <button onclick="loveCard(this)" class="flex items-center gap-2 text-femboy-500 font-bold text-sm hover:text-femboy-700 transition">
+                        <span>💖</span> <span class="love-count">284</span> Loves
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Vibe / Quiz Section -->
+    <section id="vibe" class="relative z-10 py-16 max-w-4xl mx-auto px-4">
+        <div class="glass-card rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-femboy-300 text-center">
+            <span class="text-3xl mb-2 inline-block">🌸</span>
+            <h2 class="cute-heading text-2xl md:text-3xl font-bold text-gray-800 mb-4">What's Your Vibe Today?</h2>
+            <p class="text-gray-600 mb-8">Click a mood below to get your personalized daily compliment and cute encouragement!</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button onclick="showVibe('cozy')" class="bg-femboy-100 hover:bg-femboy-200 text-femboy-700 px-6 py-3 rounded-2xl font-cute font-bold transition shadow-sm hover:scale-105">🧸 Ultra Cozy</button>
+                <button onclick="showVibe('confident')" class="bg-pink-100 hover:bg-pink-200 text-pink-700 px-6 py-3 rounded-2xl font-cute font-bold transition shadow-sm hover:scale-105">✨ Super Confident</button>
+                <button onclick="showVibe('playful')" class="bg-femboy-200 hover:bg-femboy-300 text-femboy-800 px-6 py-3 rounded-2xl font-cute font-bold transition shadow-sm hover:scale-105">🎀 Playful & Cute</button>
+            </div>
+
+            <div id="vibe-result" class="hidden bg-white rounded-2xl p-6 border border-femboy-200 shadow-inner text-gray-700 font-medium text-lg animate-fade-in">
+                <!-- Vibe text populated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Forum Placeholder Section -->
+    <section id="community" class="relative z-10 py-16 bg-white/40 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-femboy-400 font-bold text-sm tracking-widest uppercase">Safe Space</span>
+                <h2 class="cute-heading text-3xl md:text-4xl font-bold text-gray-800 mt-2">Community & Discussions 💬</h2>
+                <p class="text-gray-600 mt-2">Share tips, show off outfits, and chat with fellow community members.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Discussion Feed -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="glass-card p-6 rounded-2xl shadow-sm border border-femboy-200">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-bold text-gray-800 flex items-center gap-2">🎀 @PinkPrincess <span class="text-xs bg-femboy-100 text-femboy-600 px-2 py-0.5 rounded-full">Fashion</span></span>
+                            <span class="text-xs text-gray-400">2 hours ago</span>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-4">Just got my new pastel pink knee socks in the mail! They are so soft and comfy. Any recommendations for cute skirts to pair them with?</p>
+                        <div class="flex items-center gap-6 text-sm text-gray-500">
+                            <button onclick="likePost(this)" class="hover:text-femboy-500 flex items-center gap-1"><span>💖</span> <span class="count">24</span></button>
+                            <button class="hover:text-femboy-500 flex items-center gap-1"><span>💬</span> 8 replies</button>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl shadow-sm border border-femboy-200">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-bold text-gray-800 flex items-center gap-2">✨ @StarryAesthetic <span class="text-xs bg-pink-100 text-pink-600 px-2 py-0.5 rounded-full">Makeup</span></span>
+                            <span class="text-xs text-gray-400">5 hours ago</span>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-4">Quick makeup tip: A little bit of soft pink blush on the tip of your nose and cheekbones instantly gives that adorable anime glow! 🌸</p>
+                        <div class="flex items-center gap-6 text-sm text-gray-500">
+                            <button onclick="likePost(this)" class="hover:text-femboy-500 flex items-center gap-1"><span>💖</span> <span class="count">56</span></button>
+                            <button class="hover:text-femboy-500 flex items-center gap-1"><span>💬</span> 14 replies</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post Box / Sidebar -->
+                <div class="glass-card p-6 rounded-3xl shadow-md h-fit border border-femboy-300">
+                    <h3 class="cute-heading text-lg font-bold text-gray-800 mb-4">Post to the Community 🌸</h3>
+                    <form onsubmit="handlePost(event)">
+                        <input type="text" id="post-name" placeholder="Your cute display name" required class="w-full mb-3 px-4 py-2.5 rounded-xl border border-femboy-200 bg-white focus:outline-none focus:ring-2 focus:ring-femboy-400 text-sm">
+                        <textarea id="post-content" rows="4" placeholder="Share your thoughts or outfit updates..." required class="w-full mb-4 px-4 py-2.5 rounded-xl border border-femboy-200 bg-white focus:outline-none focus:ring-2 focus:ring-femboy-400 text-sm resize-none"></textarea>
+                        <button type="submit" class="w-full bg-gradient-to-r from-femboy-400 to-pink-500 text-white font-cute font-bold py-3 rounded-xl shadow hover:opacity-95 transition">
+                            Post Update ✨
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white/80 border-t border-femboy-200 py-8 text-center text-gray-500 text-sm mt-auto">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="text-xl">🎀</span>
+                <span class="cute-heading font-bold text-gray-700">Femboy Zone</span>
+            </div>
+            <p>Made with lots of pink, love, and sparkles ✨ 2026</p>
+            <div class="flex space-x-4 text-femboy-500">
+                <a href="#" class="hover:text-femboy-700 text-lg"><i class="fab fa-discord"></i></a>
+                <a href="#" class="hover:text-femboy-700 text-lg"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-femboy-700 text-lg"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Join Modal -->
+    <div id="joinModal" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="glass-card bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl relative border-2 border-femboy-300 animate-scale-up">
+            <button onclick="closeJoinModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl font-bold">×</button>
+            <div class="text-center mb-6">
+                <span class="text-4xl mb-2 inline-block">💖</span>
+                <h3 class="cute-heading text-2xl font-bold text-gray-800">Join Femboy Zone</h3>
+                <p class="text-gray-600 text-sm mt-1">Get updates on cute fashion trends, community meetups, and style tips!</p>
+            </div>
+            <form onsubmit="handleJoin(event)">
+                <input type="email" placeholder="Your cute email address" required class="w-full mb-4 px-4 py-3 rounded-xl border border-femboy-200 bg-white focus:outline-none focus:ring-2 focus:ring-femboy-400 text-sm">
+                <button type="submit" class="w-full bg-gradient-to-r from-femboy-500 to-pink-500 text-white font-cute font-bold py-3 rounded-xl shadow-lg hover:opacity-95 transition">
+                    Join the Club ✨
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Message Box / Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-white border-2 border-femboy-300 text-gray-800 px-6 py-4 rounded-2xl shadow-2xl transform translate-y-32 opacity-0 transition-all duration-300 flex items-center gap-3">
+        <span class="text-2xl">✨</span>
+        <span id="toast-msg" class="font-medium text-sm">Success! Welcome to the zone!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function openJoinModal() {
+            const modal = document.getElementById('joinModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeJoinModal() {
+            const modal = document.getElementById('joinModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const msgEl = document.getElementById('toast-msg');
+            msgEl.textContent = message;
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 3500);
+        }
+
+        function handleJoin(e) {
+            e.preventDefault();
+            closeJoinModal();
+            showToast('Yay! Welcome to the cutest club on the web! 💖');
+        }
+
+        function loveCard(btn) {
+            const countSpan = btn.querySelector('.love-count');
+            let count = parseInt(countSpan.textContent);
+            countSpan.textContent = count + 1;
+            btn.classList.add('text-pink-600', 'scale-110');
+            setTimeout(() => btn.classList.remove('scale-110'), 200);
+            showToast('You sent love to this style! 💖');
+        }
+
+        function likePost(btn) {
+            const countSpan = btn.querySelector('.count');
+            let count = parseInt(countSpan.textContent);
+            countSpan.textContent = count + 1;
+            showToast('Liked post! ✨');
+        }
+
+        function handlePost(e) {
+            e.preventDefault();
+            const name = document.getElementById('post-name').value;
+            const content = document.getElementById('post-content').value;
+            
+            if(!name || !content) return;
+
+            showToast('Your cute update was posted to the community! 🌸');
+            e.target.reset();
+        }
+
+        function showVibe(vibeType) {
+            const resultBox = document.getElementById('vibe-result');
+            resultBox.classList.remove('hidden');
+            
+            const vibes = {
+                cozy: "🧸 Ultra Cozy Vibe: Wrap yourself in your favorite oversized hoodie, grab a warm drink, and enjoy some peaceful relaxation today. You deserve all the comfort!",
+                confident: "✨ Super Confident Vibe: Your cuteness and radiance are unmatched today! Step out with your head held high and shine as bright as you want to!",
+                playful: "🎀 Playful & Cute Vibe: Time to accessorize! Put on your favorite cute bow or ribbons, listen to bubbly upbeat tunes, and have an amazing fun-filled day!"
+            };
+
+            resultBox.textContent = vibes[vibeType];
+        }
+    </script>
+</body>
+</html>
